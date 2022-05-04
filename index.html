@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VarantApp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Se usa libreria Swipper para las animaciones -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+  
+    <section>
+        
+        <header>
+            <a href="" class="logo">VarantApp<span>.</span></a>
+            <div class="funcionNav" onclick="navFuncion()"></div>
+            <ul class="navegador">
+                <li><a href="" onclick="navFuncion()">Home</a></li>
+                <li><a href="dashboard2.html" onclick="navFuncion()">Dashboard</a></li>
+                <li><a href="pokemons.html" onclick="navFuncion()">Agentes</a></li>
+                <li><a href="" onclick="navFuncion()">Contact</a></li>
+                
+            </ul>
+        </header>
+
+        <div class="contenedor">
+            <div class="textBx">
+                <h2>¡El shooter del momento!</h2>
+                <p>Bienvenido, VarantApp es una aplicativo Web donde podras encontrar un diseño amigable, donde podras encontrar un apartado de Dashboard en este apartado encontraras a tu Pokemon favorito y sus estadisticas, ademas encontraras información reelevante por medio de los graficos, donde te aseguro que conoceras y entenderas datos que seguramente no conocias sobre la historia de valorant y sus agentes, ademas encontraras una lista de Agentes, de igual forma encontraras una pestaña donde podras buscar las Categorias que desees y conocer sus caracteristicas o te invito a entrar a Agemtes donde encontraras una lista de Agentes.</p>
+                <a href="dashboard2.html">LET'S GO!</a>
+            </div>
+
+            <div class="imgBx">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                    </div>
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div> -->
+                  </div>
+              
+            </div>
+             
+        </div>
+        </div>
+      
+      
+    </section>
+
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+
+      <ul class="redes">
+        <li><a href=""><img src="img/facebook.png" alt=""></a></li>
+        <li><a href=""><img src="img/instagram.png" alt=""></a></li>
+        <li><a href=""><img src="img/twitter.png" alt=""></a></li>
+      </ul>
+      <div class="derechos">
+        <p>Copyright 2022 <span>Edinson Morales</span> Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+      //Libreria Swiper para la animacion slide de las imagenes
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      //Cuando la resolucion disminuye y se muestra el toggle icon y le damos clic en este la clase funcionNav y navegador cambian a active, lo cual hace que se apliquen los diseños respectivos para el responsive.
+      function navFuncion(){
+            const funcionNav = document.querySelector('.funcionNav'); //se obtiene la clase funcionNav y se guarda en una constante
+            const navegador= document.querySelector('.navegador'); //se obtiene la clase navegador y se guarda en una constante
+            funcionNav.classList.toggle('active'); //Convierte funcionNav en funcionNavactive
+            navegador.classList.toggle('active');//Convierte navegador en funcionNavactive
+        }
+
+      
+    </script>
+
+    
+</body>
+</html>
